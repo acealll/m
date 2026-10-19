@@ -1,0 +1,16 @@
+2 april 2019
+
+4.txt is on the server.
+
+i didn't write it. it's not in the listing, because i make the
+listing by hand and i'm not adding it. but a listing is only a
+page someone typed. files don't need to be listed to exist. if
+you ask for one by name, the server just hands it over.
+
+try it. look at the address of this page, the bit at the top of
+your browser that ends in 5.txt. change the 5 to a 4.
+
+its modified date is a year that hasn't happened yet.
+
+i'm taking the site down. i don't want to be in a story i can't
+see the end of.

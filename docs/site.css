@@ -1,0 +1,67 @@
+:root {
+  --bg: #f7f6f2;
+  --fg: #141414;
+  --muted: #77756f;
+  --faint: #dddbd4;
+  --link: #1a3fb8;
+  --visited: #5b2a86;
+  --mono: ui-monospace, "SF Mono", Menlo, "DejaVu Sans Mono", Consolas, "Courier New", monospace;
+  --serif: var(--mono); /* everything is typed */
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121212; --fg: #d6d4cc; --muted: #807d75; --faint: #2c2b28;
+    --link: #8fb0ff; --visited: #c3a0e8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121212; --fg: #d6d4cc; --muted: #807d75; --faint: #2c2b28;
+  --link: #8fb0ff; --visited: #c3a0e8;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.7 var(--mono);
+}
+main { max-width: 68ch; margin: 0 auto; padding: 14vh 16px 18vh; }
+h1, h2 { font: inherit; font-weight: normal; margin: 0 0 2em; }
+h2 { margin: 2.6em 0 1em; color: var(--muted); }
+p { margin: 0 0 1.2em; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:visited { color: var(--visited); }
+em, i { font-style: normal; }
+.muted { color: var(--muted); }
+small { font-size: 1em; }
+::selection { background: var(--fg); color: var(--bg); }
+
+/* the quiet link */
+a.quiet, a.quiet:visited { color: inherit; text-decoration: none; padding: .6em .5em; margin: -.6em -.5em; }
+.ps { margin-top: 3em; opacity: 0; transition: opacity 4s ease; }
+.ps.on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .ps { transition: none; } }
+
+/* attic: the list */
+.photos { list-style: none; padding: 0; margin: 0; }
+.photos li { margin: 0 0 1.6em; }
+.photos a { display: grid; grid-template-columns: 96px 1fr; gap: 1.2em; align-items: start; }
+.photos img { display: block; width: 96px; height: 128px; object-fit: cover; background: var(--faint); }
+
+/* attic: a photo page */
+.photo { display: block; width: auto; max-width: 100%; height: auto; max-height: 80vh; background: var(--faint); }
+.caption { margin-top: 1em; }
+table.exif { border-collapse: collapse; }
+table.exif th { text-align: left; font-weight: normal; color: var(--muted); padding: 0 2.5em .2em 0; vertical-align: top; white-space: nowrap; }
+table.exif td { padding: 0 0 .2em; overflow-wrap: anywhere; }
+
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  main { padding-top: 9vh; }
+  table.exif th { padding-right: 1.2em; }
+}

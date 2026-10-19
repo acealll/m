@@ -1,0 +1,19 @@
+21 march 2019
+
+it keeps happening. every night it asks for the next note before
+i've written it, and every morning i sit down and write it.
+
+last night:
+
+    GET /notes/4.txt      404
+    GET /notes/4.txt      404
+    GET /notes/4.txt      404
+    GET /lantern/         403
+
+it asked for 4 eleven times.
+
+so i'm not writing a 4. i'm skipping the number. let's see what
+it does when the story doesn't go where it expects.
+
+(lantern/ is a little door i've been building. it's locked, and
+nobody should know it's there.)

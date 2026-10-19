@@ -1,0 +1,37 @@
+<!doctype html>
+<!--
+  you read the back of the page. most people never do.
+
+  i asked the robots not to look in a couple of places.
+  they mostly listen. you don't have to.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>m.</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<main>
+  <h1>m.</h1>
+  <p>I used to keep notes here. I’ve taken them down<a class="quiet" href="notes/">.</a></p>
+  <p>If you came for the photographs, those are gone too.</p>
+  <p class="muted"><small>last updated 2 April 2019</small></p>
+  <p class="muted ps" id="ps" hidden><small>p.s. i was never very good at taking things down. something in that first sentence still goes somewhere.</small></p>
+</main>
+<script src="trace.js"></script>
+<script>
+  // If someone lingers, a postscript fades in to nudge them toward the full stop.
+  setTimeout(() => {
+    const postscript = document.getElementById('ps');
+    postscript.hidden = false;
+    requestAnimationFrame(() => postscript.classList.add('on')); // next frame, so the fade actually runs
+  }, 25000);
+
+  // For the people who open developer tools.
+  console.log('%cyou opened the console.', 'font: italic 14px Georgia, serif');
+  console.log('there is nothing in here. the robots were told where not to look, though.');
+</script>
+</body>
+</html>

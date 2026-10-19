@@ -1,0 +1,8 @@
+# m. / 2019
+#
+# a polite request to machines that read websites.
+# people are not machines, and it was never a lock.
+
+User-agent: *
+Disallow: /notes/
+Disallow: /lantern/

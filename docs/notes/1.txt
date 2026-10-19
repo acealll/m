@@ -1,0 +1,9 @@
+14 march 2019
+
+set the old machine in the cupboard up as a web server. there is
+nothing on it but this folder. i'm writing things down here because
+nobody reads text files.
+
+first thing i did was turn on the access log. you can learn a lot
+about a stranger from one line of it: where they came from, what
+they asked for, and what software they used to ask.

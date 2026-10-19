@@ -1,0 +1,2 @@
+# the site lives in docs/ for GitHub Pages; count it as code, not documentation
+docs/** linguist-documentation=false
